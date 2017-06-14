@@ -1,0 +1,10 @@
+version: '3'
+
+services: 
+  testrest:
+    build: .
+    command: python2.7 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/codigo
+    ports:
+      - "8000:8000" 
